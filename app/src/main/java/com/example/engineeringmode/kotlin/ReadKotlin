@@ -1,0 +1,82 @@
+
+
+https://zhuanlan.zhihu.com/p/258452615
+
+
+Kotlin中的方法和属性可以不包含在类中
+
+Kotlin中语句不需要以;结束
+
+Kotlin中数据类型是后置的
+
+Kotlin方法使用fun关键字定义
+
+Kotlin的类和方法默认是public final的  ：类默认不可以被继承，基类中的方法默认不可以被重写，如果想要被继承或者重写需要用open关键字标记
+
+Kotlin中类继承和接口实现使用:标记
+
+Kotlin中使用var,val声明变量及属性，而且可以进行类型推断
+
+Kotlin存在非空与可空类型 ：
+                 //非空类型
+                 var name1:String="shusheng"
+                 //可空类型
+                 var name2:String?=null
+
+Kotlin中package可以与文件路径不一致
+
+Kotlin中没有受检异常（Checked Exception）
+
+Kotlin强调不可变的概念
+
+//---------------java中不存在的特性--------------
+
+1 方法可以作为参数进行传递；
+fun calculate(x: Int, y: Int, operation: (Int, Int) -> Int): Int {
+    return operation(x, y)
+}
+//如何调用
+fun sum(x: Int, y: Int): Int {
+    return x + y
+}
+//将sum方法当参数传入了calculate方法中
+calculate(4, 5, ::sum)
+
+//我们也可以使用Lambda表达式
+calculate(4, 5, { a, b -> a + b })
+//当Lambda表达式是方法的最后一个参数时，其可以移到()外面
+calculate(4, 5) { a, b -> a + b }
+
+2 属性(Property)：对应Java类里的私有字段（Field）外加getter和setter方法
+
+3 数据类 data class：大体相当于Java中的JavaBean,但有细微差别，这也是Kotlin大势宣传其简洁性时经常展示的看家特性
+
+4 密封类 ( Sealed Classes)
+
+5 扩展方法(Extension functions)与扩展属性(Extension properties)
+fun String.wrapWithSymbol() :String{
+    return "<$this>"
+}
+
+//使用
+println("my name is ${"shusheng007".wrapWithSymbol()}")
+
+6 操作符重载
+
+7 协程
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

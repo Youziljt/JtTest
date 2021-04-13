@@ -1,0 +1,181 @@
+         01、消除字段歧义
+
+public class Writer {
+    private int age;
+    private String name;
+
+    public Writer(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+}
+其中this 消除歧义
+
+       02、引用类的其他构造方法
+当一个类的构造方法有多个，并且它们之间有交集的话，就可以使用 this 关键字来调用不同的构造方法，从而减少代码量。
+
+无参构造方法中调用有参构造方法
+public class Writer {
+    private int age;
+    private String name;
+
+    public Writer(int age, String name) {
+        this.age = age;
+        this.name = name;
+    }
+
+    public Writer() {
+        this(18, "沉默王二");
+    }
+}
+有参构造方法中调用无参构造方法
+public class Writer {
+    private int age;
+    private String name;
+
+    public Writer(int age, String name) {
+        this();
+        this.age = age;
+        this.name = name;
+    }
+
+    public Writer() {
+    }
+}
+
+
+     03、作为参数传递
+
+public class ThisTest {
+    public ThisTest() {
+        print(this);
+    }
+
+    private void print(ThisTest thisTest) {
+        System.out.println("print " +thisTest);
+    }
+
+    public static void main(String[] args) {
+        ThisTest test = new ThisTest();
+        System.out.println("main " + test);
+    }
+}
+从结果中可以看得出来，this 就是我们在 main() 方法中使用 new 关键字创建的 ThisTest 对象。
+
+
+    04、链式调用
+public class Writer {
+    private int age;
+    private String name;
+    private String bookName;
+
+    public Writer(WriterBuilder builder) {
+        this.age = builder.age;
+        this.name = builder.name;
+        this.bookName = builder.bookName;
+    }
+
+    public static class WriterBuilder {
+        public String bookName;
+        private int age;
+        private String name;
+
+        public WriterBuilder(int age, String name) {
+            this.age = age;
+            this.name = name;
+        }
+
+        public WriterBuilder writeBook(String bookName) {
+            this.bookName = bookName;
+            return this;
+        }
+
+        public Writer build() {
+            return new Writer(this);
+        }
+    }
+}
+
+
+    05、在内部类中访问外部类对象
+
+public class ThisInnerTest {
+    private String name;
+
+    class InnerClass {
+        public InnerClass() {
+            ThisInnerTest thisInnerTest = ThisInnerTest.this;
+            String outerName = thisInnerTest.name;
+        }
+    }
+}
+
+
+    06 super 关键字
+
+    父类
+    public class SuperBase {
+        String message = "父类";
+
+        public SuperBase(String message) {
+            this.message = message;
+        }
+
+        public SuperBase() {
+        }
+
+        public void printMessage() {
+            System.out.println(message);
+        }
+    }
+    子类
+public class SuperSub extends SuperBase {
+    String message = "子类";
+
+    public SuperSub(String message) {
+        super(message);
+    }
+
+    public SuperSub() {
+        super.printMessage();
+        printMessage();
+    }
+
+    public void getParentMessage() {
+        System.out.println(super.message);
+    }
+
+    public void printMessage() {
+        System.out.println(message);
+    }
+}
+1）super 关键字可用于访问父类的构造方法
+2）super 关键字可以访问父类的变量
+3）当方法发生重写时，super 关键字可以访问父类的同名方法
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

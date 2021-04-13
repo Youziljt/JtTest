@@ -1,0 +1,35 @@
+
+
+
+观察者模式的定义：
+定义对象间一种一对多的依赖关系。使得每当一个对象改变时，依赖它的对象都会得到通知发生改变。
+
+
+
+使用场景：
+1 关联行为场景，需要注意的是，关联行为是可拆分的，而不是组合关系。
+2 事件多级触发场景。
+3 跨系统的消息交换场景。
+
+android 源码中的使用：adapter的 notifyDataSetChanged()方法：
+
+
+BroadcastReceiver 是 android 四大组件之一，它作为应用内，进程间的一种重要通信手段，能够将某个消息通过广播的形式传播给它注册的对应广播接受器的对象，接受对象需要通过Context
+的registerReceiver函数注册到AMS中，当通过sendBroadcast发送广播时，所有住了对应的IntentFilter的BroadcastReceiver对象就会接受到这个消息，BroadcastReceiver
+的onReceive方法会被调用，这就是一个经典的发布-----订阅模式，也就是观察者模式。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
