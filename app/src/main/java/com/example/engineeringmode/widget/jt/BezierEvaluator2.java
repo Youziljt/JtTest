@@ -21,7 +21,6 @@ public class BezierEvaluator2 implements TypeEvaluator{
 
         float y = (float) (Math.sin(x * Math.PI / 180) * 100) + endPoint.y / 2;
 
-
         PointF point = new PointF();
 
         point.x = x;

@@ -31,7 +31,7 @@ import java.util.Random;
  * @author ljt
  * Date: 3/30/21
  * Time: 10:24 AM
- * Description:
+ * Description: 心形扩散
  */
 public class PeriscopeLayout extends RelativeLayout {
 
@@ -176,7 +176,7 @@ public class PeriscopeLayout extends RelativeLayout {
     }
 
     /**
-     * 获取中间的两个 点
+     * 获取中间的两个点
      *
      * @param scale
      */

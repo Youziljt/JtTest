@@ -16,19 +16,23 @@ import androidx.annotation.Nullable;
  * @author ljt
  * Date: 3/31/21
  * Time: 10:32 AM
- * Description: 基础属性：介绍模块
+ * Description:  基础属性：介绍模块
  */
 public class SloopView extends View {
 
     private Paint mPaint = new Paint();
 
 
-    //new view调用。java代码调用才会调用。
+    /**
+     * new view调用。java代码调用才会调用。
+     */
     public SloopView(Context context) {
         super(context);
     }
 
-    //xml布局调用
+    /**
+     * xml布局调用
+     */
     public SloopView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         initPaint();
