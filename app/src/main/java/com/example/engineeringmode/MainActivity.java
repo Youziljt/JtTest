@@ -14,6 +14,9 @@ import com.example.engineeringmode.widget.jt.TestView;
 
 public class MainActivity extends AppCompatActivity {
 
+    /**
+     * 自定义view 相关
+     */
     private PeriscopeLayout viewById;
     private DrawCubicView cubicView;
     private TestView test_view;
@@ -68,8 +71,6 @@ public class MainActivity extends AppCompatActivity {
                 alpha.setDuration(5000);
                 alpha.start();            }
         });
-
-
 
     }
 }
