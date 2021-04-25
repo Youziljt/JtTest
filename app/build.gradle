@@ -1,5 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
 
 android {
     compileSdkVersion 30
@@ -44,6 +46,12 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.3"
     // 协程Android支持库
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.3"
+
+    //在最新beta版本中谷歌推荐使用Activity Results API来处理页面数据的处理。
+    //通过新的 Activity Result API，我们可以单独的类中处理结果回调，真正做到 单一职责。
+    implementation 'androidx.activity:activity-ktx:1.2.0-beta01'
+    implementation 'androidx.fragment:fragment-ktx:1.3.0-beta01'
+
 
 }
 repositories {
