@@ -1,12 +1,12 @@
-package com.example.engineeringmode
+package com.example.engineeringmode.kotlinactivity
 
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.widget.Button
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
-import com.example.engineeringmode.others.CustomActivityResultContract
+import com.example.engineeringmode.R
+import com.example.engineeringmode.kotlinactivity.other.CustomActivityResultContract
 import kotlinx.android.synthetic.main.activity_main2.*
 
 /**
@@ -31,7 +31,7 @@ class FirstActivity : AppCompatActivity() {
 //            activityResultLauncher.launch(intent)
 
             //发送数据
-            val  intent = Intent(this,SecondActivity::class.java).apply {
+            val  intent = Intent(this, SecondActivity::class.java).apply {
                 putExtra("test","request")
             }
             activityResultLauncher.launch(intent)

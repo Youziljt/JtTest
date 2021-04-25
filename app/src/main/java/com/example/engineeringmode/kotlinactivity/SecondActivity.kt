@@ -1,10 +1,11 @@
-package com.example.engineeringmode
+package com.example.engineeringmode.kotlinactivity
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.engineeringmode.R
 import kotlinx.android.synthetic.main.activity_main2.*
 
 /**

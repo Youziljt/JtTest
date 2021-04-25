@@ -1,4 +1,4 @@
-package com.example.engineeringmode.kotlin
+package com.example.engineeringmode.kotlinactivity
 
 import android.os.Bundle
 import android.util.Log

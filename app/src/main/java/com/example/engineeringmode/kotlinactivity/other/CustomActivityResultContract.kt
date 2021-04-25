@@ -1,4 +1,4 @@
-package com.example.engineeringmode.others
+package com.example.engineeringmode.kotlinactivity.other
 
 import android.app.Activity
 import android.content.Context
@@ -27,4 +27,5 @@ class CustomActivityResultContract : ActivityResultContract<String, String>() {
         return if (resultCode == Activity.RESULT_OK && data != null) data
         else null
     }
+
 }

@@ -7,22 +7,21 @@
     tools:context=".MainActivity"
     tools:ignore="MissingConstraints">
 
-    <!--    <TextView-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:text="Hello World!"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
+    <TextView
+        android:id="@+id/tv_ali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="阿里路由!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <com.example.engineeringmode.widget.GestureRollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="100dp"
-        android:visibility="gone"/>
-
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/tv"
@@ -30,7 +29,6 @@
         android:layout_height="100dp"
         android:background="@drawable/heart3"
         android:visibility="gone" />
-
 
     <TextView
         android:id="@+id/tv_left"
@@ -49,7 +47,6 @@
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/tv_left" />
 
-
     <com.example.engineeringmode.widget.DrawCubicView
         android:id="@+id/draw_cubic_view"
         android:layout_width="match_parent"
@@ -57,7 +54,6 @@
         android:layout_marginTop="50dp"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/tv_right" />
-
 
     <com.example.engineeringmode.widget.MyView
         android:id="@+id/my_view"
@@ -72,13 +68,11 @@
         android:layout_height="600dp"
         android:visibility="gone" />
 
-
     <com.example.engineeringmode.widget.MyWaveView
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:visibility="gone"
         app:layout_constraintTop_toBottomOf="@+id/my_view" />
-
 
     <com.example.engineeringmode.widget.CircleView
         android:id="@+id/circle_view"
