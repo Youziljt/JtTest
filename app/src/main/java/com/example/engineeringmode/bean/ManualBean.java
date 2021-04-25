@@ -11,12 +11,12 @@ import android.os.Parcelable;
  * Description:
  */
 @SuppressLint("ParcelCreator")
-public class ManualBean implements Parcelable {
+public class ManualBean implements Parcelable{
 
     public String name;
     public int age;
 
-    public ManualBean(String name ,int age) {
+    public ManualBean(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -28,7 +28,6 @@ public class ManualBean implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(name);
-        dest.writeInt(age);
+
     }
 }

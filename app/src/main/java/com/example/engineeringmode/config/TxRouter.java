@@ -27,9 +27,10 @@ public class TxRouter {
     public static void openMainActivity3(Activity context) {
         ARouter.getInstance()
                 .build(MainActivity3)
-                .withBoolean("is", true)
+//                .withBoolean("one", true)
                 .withString("two", "from mainActivity")
-                .withParcelable("three", new ManualBean("jt",98))
+//                .withParcelable("three", new ManualBean("jt",98))
+                .withInt("four", 4)
                 .navigation(context);
     }
 
